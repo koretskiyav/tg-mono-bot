@@ -1,5 +1,5 @@
 import * as dotenv from "dotenv";
-import { createBot } from './src/bot'
+import { createBot } from './bot'
 
 dotenv.config();
 

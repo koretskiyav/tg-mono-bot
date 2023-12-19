@@ -2,9 +2,11 @@
   "name": "tg-mono-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "scripts": {
-    "dev": "npx nodemon index.ts"
+    "start": "node build",
+    "build": "rimraf ./build && tsc",
+    "dev": "npx nodemon"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +14,7 @@
   "devDependencies": {
     "@types/node-telegram-bot-api": "^0.64.1",
     "nodemon": "^3.0.2",
+    "rimraf": "^5.0.5",
     "ts-node": "^10.9.2"
   },
   "dependencies": {
