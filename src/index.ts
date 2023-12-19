@@ -1,4 +1,4 @@
-import * as dotenv from "dotenv";
+import * as dotenv from 'dotenv';
 dotenv.config();
 export { bot } from './bot';
 import { db } from './db';
@@ -10,6 +10,6 @@ const start = () => {
   } catch (err) {
     console.log(err);
   }
-}
+};
 
 start();
