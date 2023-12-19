@@ -3,4 +3,4 @@ import { createBot } from './bot'
 
 dotenv.config();
 
-createBot(process.env.TELEGRAM_BOT_TOKEN!);
+export default createBot(process.env.TELEGRAM_BOT_TOKEN!);
