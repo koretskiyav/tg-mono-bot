@@ -13,7 +13,7 @@ export const createBot = (token: string) => {
   });
 
   bot.onText(/\/subscribe/, msg => {
-    bot.sendMessage(msg.chat.id, "Done! Good job, bro!");
+    bot.sendMessage(msg.chat.id, "Subscribed!");
   });
 
   return bot;
