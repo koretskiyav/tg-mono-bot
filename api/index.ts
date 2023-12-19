@@ -1,3 +1,3 @@
-import app from '../src'
+import { bot } from '../src'
 
-export default app;
+export default bot;

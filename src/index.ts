@@ -1,6 +1,15 @@
 import * as dotenv from "dotenv";
-import { createBot } from './bot'
-
 dotenv.config();
+export { bot } from './bot';
+import { db } from './db';
 
-export default createBot(process.env.TELEGRAM_BOT_TOKEN!);
+const start = () => {
+  try {
+    db.authenticate();
+    db.sync();
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+start();
