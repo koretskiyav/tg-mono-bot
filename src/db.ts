@@ -1,3 +1,4 @@
+import * as pg from 'pg';
 import { Sequelize } from "sequelize-typescript";
 import { User } from "./models/user";
 
@@ -7,9 +8,10 @@ export const db = new Sequelize(
   process.env.POSTGRES_PASSWORD || "POSTGRES_PASSWORD",
   {
     models: [User],
-    dialect: "postgres",
+    dialectModule: pg,
     host: process.env.POSTGRES_HOST || "POSTGRES_HOST",
     port: Number(process.env.POSTGRES_PORT) || 5432,
+    ssl: true,
     dialectOptions: {
       ssl: true,
     }
